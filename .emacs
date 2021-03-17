@@ -8,7 +8,8 @@
  '(custom-enabled-themes '(deeper-blue))
  '(custom-safe-themes
    '("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default))
- '(package-selected-packages '(treemacs magit use-package company spacemacs-theme))
+ '(package-selected-packages
+   '(which-key treemacs magit use-package company spacemacs-theme))
  '(spacemacs-theme-comment-bg nil)
  '(spacemacs-theme-comment-italic t))
 (custom-set-faces
@@ -69,6 +70,7 @@
   :ensure t
   :bind ("C-x g" . magit-status))
 
+;; Enable treemacs
 (use-package treemacs
   :ensure t
   :config
@@ -78,3 +80,13 @@
 	("M-0" . treemacs-select-window)
 	("C-x t t" . treemacs)
 	("C-x t C-s" . treemacs-find-file)))  
+
+;; Enable ido
+(setq ido-everywhere t)
+(setq ido-enable-flex-matching t)
+(ido-mode t)
+
+;; Enable which key
+(use-package which-key
+  :ensure t
+  :config (which-key-mode))
