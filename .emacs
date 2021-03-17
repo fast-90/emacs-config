@@ -9,7 +9,7 @@
  '(custom-safe-themes
    '("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default))
  '(package-selected-packages
-   '(which-key treemacs magit use-package company spacemacs-theme))
+   '(zenburn-theme which-key treemacs magit use-package company spacemacs-theme))
  '(spacemacs-theme-comment-bg nil)
  '(spacemacs-theme-comment-italic t))
 (custom-set-faces
@@ -49,12 +49,10 @@
   (package-install 'usepackage))
 
 ;; Load theme
-(use-package spacemacs-theme
-  :defer t
+(use-package zenburn-theme
+  :ensure t
   :init
-  (setq spacemacs-theme-comment-bg nil)
-  (setq spacemacs-theme-comment-italic t)
-  (load-theme 'spacemacs-dark))
+  (load-theme 'zenburn t))
 
 ;; Enable Complete Any (company)
 (use-package company
